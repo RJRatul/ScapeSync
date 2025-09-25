@@ -1,4 +1,3 @@
-// src/components/landing/Header.tsx
 import Link from "next/link";
 import Container from "../ui/Container";
 import Button from "../ui/Button";

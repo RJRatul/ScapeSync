@@ -4,7 +4,6 @@ import FeaturesSection from '@/components/landing/FeaturesSection';
 import BuiltForEveryone from '@/components/landing/BuiltForEveryone';
 import Testimonials from '@/components/landing/Testimonials';
 import FAQ from '@/components/landing/FAQ';
-import CTA from '@/components/landing/CTA';
 import Footer from '@/components/landing/Footer';
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <BuiltForEveryone />
       <Testimonials />
       <FAQ />
-      <CTA />
       <Footer />
     </main>
   );

@@ -1,4 +1,3 @@
-// src/components/landing/HeroSection.tsx
 import Container from "../ui/Container";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,6 +33,7 @@ export default function HeroSection() {
                   zIndex: -1,
                 }}
                 priority
+                 className="lg:block hidden"
               />
               <h1 className="relative text-5xl md:text-6xl lg:text-7xl xl:text-[84px] leading-tight md:leading-snug lg:leading-[92px] font-bold text-gray-800 mb-6">
                 All Your Jobs <br />
@@ -52,9 +52,9 @@ export default function HeroSection() {
                       left: "174px",
                       pointerEvents: "none",
                       zIndex: -1,
-                      width: "446px",
                     }}
                     priority
+                    className="lg:block hidden"
                   />
                 </span>
               </h1>
@@ -107,7 +107,7 @@ export default function HeroSection() {
               </Link>
             </div>
           </div>
-          <div className="lg:w-1/2 flex justify-center lg:justify-end relative z-10">
+          <div className="lg:w-1/2  lg:flex hidden justify-center lg:justify-end relative z-10">
             <div className="relative w-full max-w-lg h-[400px] lg:h-[500px] xl:h-[640px] flex items-center justify-center">
               <div className="relative w-full h-[70%]">
                 <Image
