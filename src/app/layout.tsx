@@ -1,12 +1,17 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Public_Sans } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-public-sans",
+});
 
 export const metadata: Metadata = {
-  title: 'ScapeSync - All Your Jobs One Smart App',
-  description: 'Streamline job scheduling, service tracking, and team management in one powerful app.',
+  title: "ScapeSync - All Your Jobs One Smart App",
+  description:
+    "Streamline job scheduling, service tracking, and team management in one powerful app.",
 };
 
 export default function RootLayout({
@@ -15,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>{children}</body>
+    <html lang="en" className={publicSans.variable} suppressHydrationWarning>
+      <body className="font-sans" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
