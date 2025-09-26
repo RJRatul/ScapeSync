@@ -1,18 +1,20 @@
 import Container from "../ui/Container";
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0F3B34] text-white py-20 relative overflow-hidden">
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-20">
         <Image
-          src="/footer.svg"
+          src="/footerVector.svg"
           alt=""
           aria-hidden="true"
           width={900}
           height={100}
-          className="object-contain"
+          className="object-contain "
         />
       </div>
 
@@ -24,11 +26,11 @@ export default function Footer() {
                 src="/footerLogo.svg"
                 alt="ScapeSync"
                 fill
-                className="object-contain w-20"
+                className="object-contain w-20 relative left-2"
                 priority
               />
             </div>
-            <p className="text-left text-sm">
+            <p className="text-left text-sm text-[#CFD8D6]">
               Your all-in-one platform for job scheduling, employee{" "}
               <br className="hidden lg:block" /> management, and client service
               built to keep your <br className="hidden lg:block" /> business
@@ -66,6 +68,20 @@ export default function Footer() {
                 </div>
               </Link>
             </div>
+          </div>
+          <div className="flex items-center gap-6 text-white text-xl justify-start">
+            <Link href="#" aria-label="YouTube">
+              <FaYoutube />
+            </Link>
+            <Link href="#" aria-label="Twitter">
+              <FaXTwitter     />
+            </Link>
+            <Link href="#" aria-label="Facebook">
+              <FaFacebookF />
+            </Link>
+            <Link href="#" aria-label="Instagram">
+              <FaInstagram />
+            </Link>
           </div>
         </div>
       </Container>

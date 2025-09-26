@@ -18,7 +18,7 @@ export default function Header() {
             />
           </div>
           <div className="flex space-x-4">
-            <Link href="/signup">
+            <Link href="/register">
               <Button variant="primary">Get Started</Button>
             </Link>
           </div>

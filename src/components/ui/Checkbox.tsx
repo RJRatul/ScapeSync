@@ -14,8 +14,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             type="checkbox"
             ref={ref}
             className={`
-              w-4 h-4 text-blue-600 border-gray-300 rounded 
-              focus:ring-blue-500 focus:ring-2
+              w-4 h-4 text-green-700 border-gray-300 rounded 
+              focus:ring-green-600 focus:ring-2
               ${error ? 'border-red-500' : ''}
               ${className}
             `}

@@ -16,7 +16,7 @@ export default function Button({
   const baseStyles = 'font-medium rounded-lg transition-colors duration-200';
   
   const variants = {
-    primary: 'bg-[#3BA334] text-white hover:bg-[#2d8427] cursor-pointer',
+    primary: 'bg-[#34A853] text-white hover:bg-[#3BA334] cursor-pointer',
     secondary: 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 cursor-pointer'
   };
