@@ -1,16 +1,16 @@
-"use client";
+'use client';
 import AuthLayout from '@/components/layouts/AuthLayout';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function CongratulationsPage() {
+function CongratulationsContent() {
   const searchParams = useSearchParams();
   const flow = searchParams.get('flow');
   
   const isPasswordResetSuccess = flow === 'password-reset';
-  // const isEmailVerificationSuccess = !isPasswordResetSuccess;
 
   const getTitle = () => {
     return isPasswordResetSuccess 
@@ -20,7 +20,7 @@ export default function CongratulationsPage() {
 
   const getDescription = () => {
     return isPasswordResetSuccess
-      ? "Your account is set up! Just verify your email to get started.."
+      ? "Your account is set up! Just verify your email to get started."
       : "Your email address has been verified. You can now access all features of ScapeSync.";
   };
 
@@ -35,7 +35,7 @@ export default function CongratulationsPage() {
   return (
     <AuthLayout title="">
       <div className="text-center">
-        <div className="w-50 h-16  flex items-center justify-center mx-auto mb-20">
+        <div className="w-50 h-16 flex items-center justify-center mx-auto mb-20">
           <Image 
             src="/congratulation.png" 
             alt="Success" 
@@ -55,5 +55,29 @@ export default function CongratulationsPage() {
         </Link>
       </div>
     </AuthLayout>
+  );
+}
+
+// Main page component with Suspense
+export default function CongratulationsPage() {
+  return (
+    <Suspense fallback={
+      <AuthLayout title="">
+        <div className="text-center">
+          <div className="w-50 h-16 flex items-center justify-center mx-auto mb-20">
+            <div className="w-16 h-16 bg-gray-200 rounded-full animate-pulse"></div>
+          </div>
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto mb-8"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
+          </div>
+          <Button variant="primary" size="lg" className="w-full block mt-4" disabled>
+            Loading...
+          </Button>
+        </div>
+      </AuthLayout>
+    }>
+      <CongratulationsContent />
+    </Suspense>
   );
 }

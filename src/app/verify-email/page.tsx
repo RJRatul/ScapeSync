@@ -1,3 +1,4 @@
+'use client';
 import AuthLayout from '@/components/layouts/AuthLayout';
 import VerificationForm from '@/components/forms/VerificationForm';
 
