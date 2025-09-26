@@ -14,7 +14,7 @@ export default function AuthLayout({
   subtitle,
 }: AuthLayoutProps) {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative">
+    <div className="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative">
       <div className="absolute top-6 left-6 sm:top-8 sm:left-8">
         <Link href="/">
           <div className="relative w-32 h-8 sm:w-40 sm:h-10">

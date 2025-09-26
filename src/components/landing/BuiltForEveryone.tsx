@@ -4,7 +4,7 @@ import ServicesUnderBuilt from "./ServicesUnderBuiltForEveryone";
 
 export default function BuiltForEveryone() {
   return (
-    <section className="py-20 bg-gray-50 text-center relative">
+    <section className="py-20 bg-white text-center relative">
       <Container>
         <div className="mb-16">
           <h2 className="text-4xl md:text-6xl font-black mb-4">
