@@ -42,7 +42,7 @@ export default function CongratulationsContent() {
           <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-nowrap">
             {title}
           </h3>
-          <p className="text-xs text-gray-600 mt-2">{description}</p>
+          <p className="text-xs text-gray-600 mt-2">{description}</p> 
         </div>
         <Link href={buttonHref}>
           <Button variant="primary" size="lg" className="w-full block mt-4">
